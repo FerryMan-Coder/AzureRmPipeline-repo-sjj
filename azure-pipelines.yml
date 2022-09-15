@@ -1,0 +1,26 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'pipelinetutorialsjj_sc'
+    subscriptionId: 'bd209c13-3a7e-4bec-90f0-6636ea80752f'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'AzureRmPipeline-rg'
+    location: 'west'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/FerryMan-Coder/AzureRmPipeline-repo-sjj/main/CreatewebApp/azuredeploy.json'
+    overrideParameters: '-projectName [projPipelineDevopsSjj]'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
