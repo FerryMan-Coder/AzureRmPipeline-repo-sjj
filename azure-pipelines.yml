@@ -21,6 +21,6 @@ steps:
     location: 'centralus'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/FerryMan-Coder/AzureRmPipeline-repo-sjj/main/CreatewebApp/azuredeploy.json'
-    overrideParameters: '-projectName projPipelineDevopsSjj'
+    overrideParameters: '-projectName ExperimenterenMetDevopsPipelines'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployPipelineTemplate'
