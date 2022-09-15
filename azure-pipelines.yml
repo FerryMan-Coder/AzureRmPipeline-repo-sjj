@@ -18,7 +18,7 @@ steps:
     subscriptionId: 'bd209c13-3a7e-4bec-90f0-6636ea80752f'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'AzureRmPipeline-rg'
-    location: 'west'
+    location: 'centralus'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/FerryMan-Coder/AzureRmPipeline-repo-sjj/main/CreatewebApp/azuredeploy.json'
     overrideParameters: '-projectName [projPipelineDevopsSjj]'
